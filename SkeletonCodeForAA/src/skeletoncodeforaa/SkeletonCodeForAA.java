@@ -32,6 +32,7 @@ public class SkeletonCodeForAA {
 
         //The player damages the Enemy, lowering their HP.
 
+        System.out.println();
         //Use Case #2: Picking up an Item
         System.out.println("Use Case #2: Picking up an Item");
         System.out.println("--------------------------------------");
@@ -45,8 +46,8 @@ public class SkeletonCodeForAA {
         //The System checks if the Character is the Player or an Enemy:
             //If Player, they pick up the Item, and it gets added to itemList in their Inventory.
             //If Enemy, the System decides at random whether to pick or ignore the item.
-    
-        
+
+        System.out.println();
         //Use Case #3: Equipping an Item
         System.out.println("Use Case #3: Equipping an Item");
         System.out.println("--------------------------------------");
@@ -60,7 +61,7 @@ public class SkeletonCodeForAA {
             //If it hasn’t, the Item’s status turns into equipped
             //Item is added to the currentEquippedList.
 
-        
+        System.out.println();
         //Use Case #4: Entering a Floor
         System.out.println("Use Case #4: Entering a Floor");
         System.out.println("--------------------------------------");
@@ -73,7 +74,7 @@ public class SkeletonCodeForAA {
         //The previous Floor removes the Player from its characterList.
         //The next floor adds the player into its characterList.
 
-
+        System.out.println();
         //Use Case #5: Falling Down a Hole
         System.out.println("Use Case #5: Falling Down a Hole");
         System.out.println("--------------------------------------");     
