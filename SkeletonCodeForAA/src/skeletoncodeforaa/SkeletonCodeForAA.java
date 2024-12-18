@@ -89,14 +89,6 @@ public class SkeletonCodeForAA {
         //The system checks how deep the Hole is:
             //If the Hole is deep enough, potion effect or not, the player instantly dies.
             //If the Hole is not deep enough to kill the player, the player is simply damaged.
-
-        
-
-
-
-
-
-        
     }
     
 }
