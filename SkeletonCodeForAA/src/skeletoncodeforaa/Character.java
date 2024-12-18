@@ -118,30 +118,156 @@ public class Character {
     
     public void sprint(String direction){
         int[][] Array = currentSurrounding.getArray();
-        move(Array, 4, 2, direction);
-        currentSurrounding.setArray(Array);
+        
         int[] position = findValue(Array, 8);
+        currentPosition = position;
         System.out.println(position);
+        
+        move(Array, currentRow, currentColumn, direction);
+        currentSurrounding.setArray(Array);
         System.out.println(name + " sprinted!");
+        
+        int[][] Arrayy = currentSurrounding.getArray();
+        for (int i = 0; i < Arrayy.length; i++) {
+            for (int j = 0; j < Arrayy[i].length; j++) {
+                
+                System.out.print(Arrayy[i][j] + " ");
+            }
+            
+            System.out.println();
+        }
     }
     
     public void dash(String direction){
         int[][] Array = currentSurrounding.getArray();
-        move(Array, 4, 2, direction);
+        
+        int[] position = findValue(Array, 8);
+        currentPosition = position;
+        System.out.println(position);
+        
+        move(Array, currentRow, currentColumn, direction);
+        move(Array, currentRow, currentColumn, direction);
         currentSurrounding.setArray(Array);
         System.out.println(name + " dashed!");
+        
+        int[][] Arrayy = currentSurrounding.getArray();
+        for (int i = 0; i < Arrayy.length; i++) {
+            for (int j = 0; j < Arrayy[i].length; j++) {
+                
+                System.out.print(Arrayy[i][j] + " ");
+            }
+            
+            System.out.println();
+        }
     }
     
-    public void roll(){
+    public void roll(String direction){
+        int[][] Array = currentSurrounding.getArray();
+        
+        int[] position = findValue(Array, 8);
+        currentPosition = position;
+        System.out.println(position);
+        
+        move(Array, currentRow, currentColumn, direction);
+        move(Array, currentRow, currentColumn, direction);
+        move(Array, currentRow, currentColumn, direction);
+        currentSurrounding.setArray(Array);
         System.out.println(name + " rolled!");
+        
+        int[][] Arrayy = currentSurrounding.getArray();
+        for (int i = 0; i < Arrayy.length; i++) {
+            for (int j = 0; j < Arrayy[i].length; j++) {
+                
+                System.out.print(Arrayy[i][j] + " ");
+            }
+            
+            System.out.println();
+        }
     }
     
     public void jump(){
+        int[][] Array = currentSurrounding.getArray();
+        
+        int[] position = findValue(Array, 8);
+        currentPosition = position;
+        System.out.println(position);
+        
+        move(Array, currentRow, currentColumn, "up");
+        currentSurrounding.setArray(Array);
         System.out.println(name + " jumped!");
+        
+        int[][] Arrayy = currentSurrounding.getArray();
+        for (int i = 0; i < Arrayy.length; i++) {
+            for (int j = 0; j < Arrayy[i].length; j++) {
+                
+                System.out.print(Arrayy[i][j] + " ");
+            }
+            
+            System.out.println();
+        }
+        
+        int[][] Arrayyy = currentSurrounding.getArray();
+        
+        int[] positionn = findValue(Array, 8);
+        currentPosition = positionn;
+        System.out.println(positionn);
+        
+        move(Arrayyy, currentRow, currentColumn, "down");
+        currentSurrounding.setArray(Arrayyy);
+        
+        int[][] Arrayyyy = currentSurrounding.getArray();
+        for (int i = 0; i < Arrayyyy.length; i++) {
+            for (int j = 0; j < Arrayyyy[i].length; j++) {
+                
+                System.out.print(Arrayyyy[i][j] + " ");
+            }
+            
+            System.out.println();
+        }
     }
     
     public void doubleJump(){
+        int[][] Array = currentSurrounding.getArray();
+        
+        int[] position = findValue(Array, 8);
+        currentPosition = position;
+        System.out.println(position);
+        
+        move(Array, currentRow, currentColumn, "up");
+        move(Array, currentRow, currentColumn, "up");
+        currentSurrounding.setArray(Array);
         System.out.println(name + " double jumped!");
+        
+        int[][] Arrayy = currentSurrounding.getArray();
+        for (int i = 0; i < Arrayy.length; i++) {
+            for (int j = 0; j < Arrayy[i].length; j++) {
+                
+                System.out.print(Arrayy[i][j] + " ");
+            }
+            
+            System.out.println();
+        }
+        
+        int[][] Arrayyy = currentSurrounding.getArray();
+        
+        int[] positionn = findValue(Array, 8);
+        currentPosition = positionn;
+        System.out.println(positionn);
+        
+        move(Arrayyy, currentRow, currentColumn, "down");
+        move(Arrayyy, currentRow, currentColumn, "down");
+        currentSurrounding.setArray(Arrayyy);
+        
+        int[][] Arrayyyy = currentSurrounding.getArray();
+        for (int i = 0; i < Arrayyyy.length; i++) {
+            for (int j = 0; j < Arrayyyy[i].length; j++) {
+                
+                System.out.print(Arrayyyy[i][j] + " ");
+            }
+            
+            System.out.println();
+        }
+        
     }
     
     public void equipItem(Item i) throws ItemNotFoundException, MaxEquippedException{
