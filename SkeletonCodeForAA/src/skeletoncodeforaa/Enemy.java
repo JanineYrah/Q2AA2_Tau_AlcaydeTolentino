@@ -13,7 +13,7 @@ public class Enemy extends Character {
     protected int tier;
     protected boolean provoked;
     
-    public Enemy(String n, int h,int a,float d,int A,int m,Floor f,Invetory i, String S, String W, String E, int T){
+    public Enemy(String n, int h,int a,float d,int A,int m,Floor f,Inventory i, String S, String W, String E, int T){
         super(n,h,a,d,A,m,f,i);
         element = E;
         strongAgainst = S;
