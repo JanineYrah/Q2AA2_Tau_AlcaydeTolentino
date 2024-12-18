@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * @author Vaio
  */
 public class Invetory {
-    private ArrayList<Item> invetory;
+    private ArrayList<Item> inventory;
     private int maxCapacity;
     
     public Invetory (Item n, int a){
@@ -18,8 +18,8 @@ public class Invetory {
         maxCapacity = a;
     }
     
-    public ArrayList<Item> getInvetoryList(){
-        return invetory;
+    public ArrayList<Item> getInventoryList(){
+        return inventory;
     }
     
     public int getMaxCapacity(){
