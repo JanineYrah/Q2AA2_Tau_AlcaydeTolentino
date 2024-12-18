@@ -23,7 +23,7 @@ public class GenerationIndexOutOfBoundsException extends Exception {
      *
      * @param msg the detail message.
      */
-    public ComboException(String msg) {
+    public GenerationIndexOutOfBoundsException(String msg) {
         super(msg);
     }
 }
