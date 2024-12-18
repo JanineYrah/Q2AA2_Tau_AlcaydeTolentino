@@ -17,8 +17,6 @@ public class SkeletonCodeForAA {
         //Use Case #2: Picking up an Item
         System.out.println("Use Case #2: Picking up an Item");
         System.out.println("--------------------------------------");
-        
-
 
 
         
@@ -26,7 +24,12 @@ public class SkeletonCodeForAA {
         System.out.println("Use Case #3: Equipping an Itemn");
         System.out.println("--------------------------------------");
 
+        Item sword = new Item("Sword", "A sword.", "unequipped");
+        Inventory playerInventory = new Inventory(sword, 10);
+        Floor Hell = new Floor();
+        Character player = new Character("Hadria", 20, 10, 5, 10, 2, Hell, playerInventory);
 
+        System.out.println("Do you want to equip " + sword + "?");
 
         
         //Use Case #4: Entering a Floor
