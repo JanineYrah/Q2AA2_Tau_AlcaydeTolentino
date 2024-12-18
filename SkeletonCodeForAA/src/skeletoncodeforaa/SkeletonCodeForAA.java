@@ -6,7 +6,7 @@ public class SkeletonCodeForAA {
 
     public static void main(String[] args) {
 
-        //Variables are placed here
+        //Object declarations are placed here
 
         //Use Case #1: Attack enemy with weapon
         System.out.println("Use Case #1: Attack enemy with Weapon");
