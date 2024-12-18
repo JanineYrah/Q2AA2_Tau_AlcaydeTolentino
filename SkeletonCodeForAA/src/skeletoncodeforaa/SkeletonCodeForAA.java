@@ -6,11 +6,7 @@ public class SkeletonCodeForAA {
 
     public static void main(String[] args) {
 
-        //Creating variables for the sake of scenarios
-        Item sword = new Item("Sword", "A sword.", "unequipped");
-        Inventory playerInventory = new Inventory(sword, 10);
-        Floor Hell = new Floor();
-        Character player = new Character("Hadria", 20, 10, 5, 10, 2, Hell, playerInventory);
+        //Variables are placed here
 
         //Use Case #1: Attack enemy with weapon
         System.out.println("Use Case #1: Attack enemy with Weapon");
