@@ -15,7 +15,7 @@ public class Character {
     protected double baseDefense;
     protected Floor currentFloor;
     protected Surrounding currentSurrounding;
-    protected Invetory invetory;
+    protected Inventory inventory;
     
     public Character(String n, int h,int a,double d,int A,int m,Floor f,Invetory i){
         name = n;
@@ -26,7 +26,7 @@ public class Character {
         baseAgility = A;
         maxEquipped = m;
         currentFloor = f;
-        invetory = i;
+        inventory = i;
     }
     
     public int getHp(){
@@ -61,8 +61,8 @@ public class Character {
         return baseAttack;
     }
     
-    public Invetory getInvetory(){
-        return invetory;
+    public Invetory getInventory(){
+        return inventory;
     }
     
     public Floor getFloor(){
@@ -271,7 +271,7 @@ public class Character {
     }
     
     public void equipItem(Item i) throws ItemNotFoundException, MaxEquippedException{
-        ArrayList<Item> list = invetory.getInvetoryList();
+        ArrayList<Item> list = inventory.getInvetoryList();
         if (list.contains(i)){
             list.remove(i);
             Item currentItem = i;
@@ -284,7 +284,7 @@ public class Character {
     }
     
     public void unequipItem(Item i) throws ItemNotFoundException{
-        ArrayList<Item> list = invetory.getInvetoryList();
+        ArrayList<Item> list = inventory.getInvetoryList();
         if (currentItem != null){
             list.add(i); //exception
             Item currentItem = null;
@@ -295,37 +295,37 @@ public class Character {
         
     }
     
-    public void pickupItem(Item i) throws ItemNotFoundException, InvetoryFullException{
+    public void pickupItem(Item i) throws ItemNotFoundException, InventoryFullException{
         ArrayList<Item> storage = invetory.getInvetoryList();
         if (storage.size() < maxEquipped){
             storage.add(i);
             System.out.println(name + " found an item and store it in their invetory!");
         } else if(storage.size() > maxEquipped){
-            throw new InvetoryFullException(name +"'s invetory is full! They can't equip any more items");
+            throw new InventoryFullException(name +"'s invetory is full! They can't equip any more items");
         } else{
             throw new ItemNotFoundException("The item can't be found in the surrounding");
         }
     }
     
-    public void useItem(Item i) throws ItemNotFoundException, InvetoryEmptyException{
-        ArrayList<Item> storage = invetory.getInvetoryList();
+    public void useItem(Item i) throws ItemNotFoundException, InventoryEmptyException{
+        ArrayList<Item> storage = inventory.getInvetoryList();
         if (storage.contains(i)){
             storage.remove(i);
             System.out.println(name + " used " + i);
         } else if(storage.size()<1){
-            throw new InvetoryEmptyException(name + "'s invetory is empty! They can't use any item.");
+            throw new InventoryEmptyException(name + "'s invetory is empty! They can't use any item.");
         } else{
             throw new ItemNotFoundException("The item can't be found in " + name + "'s inventory.");
         }
     }
     
-    public void dropItem(Item i) throws ItemNotFoundException, InvetoryEmptyException{
-        ArrayList<Item> storage = invetory.getInvetoryList();
+    public void dropItem(Item i) throws ItemNotFoundException, InventoryEmptyException{
+        ArrayList<Item> storage = inventory.getInvetoryList();
         if (storage.contains(i)){
             storage.remove(i);
             System.out.println(name + " dropped " + i);
         } else if(storage.size()<1){
-            throw new InvetoryEmptyException(name + "'s invetory is empty! They can't drop any item.");
+            throw new InventoryEmptyException(name + "'s invetory is empty! They can't drop any item.");
         } else{
             throw new ItemNotFoundException("The item can't be found in " + name + "'s inventory.");
         }
