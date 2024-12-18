@@ -4,18 +4,29 @@
  */
 package skeletoncodeforaa;
 
-/**
- *
- * @author Vaio
- * 
- */
 public class SkeletonCodeForAA {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+
+        //Use Case #1: Attack enemy with weapon
+        System.out.println("Use Case #1: Attack enemy with Weapon");
+        System.out.println("--------------------------------------");
+        Character player = new player();
+        Enemy enemy1 = new Enemy();
+        enemy1.spawn(Surrounding);
+
+        if(player.getLocation() in enemy.getSurrounding()) {
+            enemy1.setProvoked(true);
+            enemy.attack(player);
+        }
+        
+
+
+
+
+
+
+        
     }
     
 }
