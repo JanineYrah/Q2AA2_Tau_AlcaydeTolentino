@@ -8,22 +8,22 @@ package skeletoncodeforaa;
  *
  * @author Vaio
  */
-public class InvetoryFullException extends Exception {
+public class InventoryFullException extends Exception {
 
     /**
-     * Creates a new instance of <code>InvetoryFullException</code> without
+     * Creates a new instance of <code>InventoryFullException</code> without
      * detail message.
      */
-    public InvetoryFullException() {
+    public InventoryFullException() {
     }
 
     /**
-     * Constructs an instance of <code>InvetoryFullException</code> with the
+     * Constructs an instance of <code>InventoryFullException</code> with the
      * specified detail message.
      *
      * @param msg the detail message.
      */
-    public InvetoryFullException(String msg) {
+    public InventoryFullException(String msg) {
         super(msg);
     }
 }
