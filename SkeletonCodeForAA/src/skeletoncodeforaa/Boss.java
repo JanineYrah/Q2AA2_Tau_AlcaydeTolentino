@@ -9,7 +9,7 @@ package skeletoncodeforaa;
  * @author Vaio
  */
 public class Boss extends Enemy {
-    public Boss(String n, int h,int a,float d,int A,int m,Floor f,Invetory i, String S, String W, String E, int T){
+    public Boss(String n, int h,int a,float d,int A,int m,Floor f,Inventory i, String S, String W, String E, int T){
         super(n,h,a,d,A,m,f,i,S,W,E,T);
         provoked = true;
     }
