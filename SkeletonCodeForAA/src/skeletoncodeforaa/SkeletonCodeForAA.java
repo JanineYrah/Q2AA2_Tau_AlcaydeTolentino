@@ -19,8 +19,43 @@ public class SkeletonCodeForAA {
             enemy1.setProvoked(true);
             enemy.attack(player);
         }
+
+        if (Item n instanceOf Weapon) {
+            Player.attack(enemy1);
+        } else {
+            System.out.println("Cannot attack with the equipped Item");
+        }
+
+
+    
+        //Use Case #2: Picking up an Item
+        System.out.println("Use Case #2: Picking up an Item");
+        System.out.println("--------------------------------------");
+
+
+
+
+        
+        //Use Case #3: Equipping an Item
+        System.out.println("Use Case #3: Equipping an Itemn");
+        System.out.println("--------------------------------------");
+
+
+
+        
+        //Use Case #4: Entering a Floor
+        System.out.println("Use Case #4: Entering a Floor");
+        System.out.println("--------------------------------------");
+
+
+
         
 
+        //Use Case #5: Falling Down a Hole
+        System.out.println("Use Case #5: Falling Down a Hole");
+        System.out.println("--------------------------------------");        
+
+        
 
 
 
