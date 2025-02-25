@@ -13,12 +13,13 @@ public class Weapon extends Item{
     private int durability, atkboost;
     private String strongAgainst, weakAgainst;
     
-    public Weapon(String n, String d, String s, int D, int A, String S, String W){
-        super(n,d,s);
-        durability = D;
-        atkboost = A;
-        strongAgainst = S;
-        weakAgainst = W;
+    public Weapon(String name, String description, String status,
+                  int durability, int atkboosr, String strongAgainst, String weakAgainst){
+        super(name, d, status);
+        this.durability = durability;
+        this.atkboost = atkboost;
+        this.strongAgainst = strongAgainst;
+        this.weakAgainst = weakAgainst;
     }
     
     public int getDurability(){
