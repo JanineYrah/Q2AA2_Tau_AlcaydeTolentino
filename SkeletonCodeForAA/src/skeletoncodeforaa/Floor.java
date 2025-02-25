@@ -15,11 +15,11 @@ public class Floor {
     protected String stage;
     protected boolean conquered;
     
-    public Floor(ArrayList<String> E, ArrayList<Character> C, ArrayList<Enemy> e, String s){
-        elementList = E;
-        characterList = C;
-        enemyList = e;
-        stage = s;
+    public Floor(ArrayList<String> elementList, ArrayList<Character> characterList, ArrayList<Enemy> enemyList, String stage){
+        this.elementList = elementList;
+        this.characterList = characterList;
+        this.enemyList = enemyList;
+        this.stage = stage;
         conquered = false;
     }
     
