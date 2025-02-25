@@ -9,8 +9,9 @@ package skeletoncodeforaa;
  * @author Vaio
  */
 public class Boss extends Enemy {
-    public Boss(String n, int h,int a,float d,int A,int m,Floor f,Inventory i, String S, String W, String E, int T){
-        super(n,h,a,d,A,m,f,i,S,W,E,T);
+    public Boss(String name, int hp, int attack, float defense, int agility, int maxEquipped,
+                Floor floor, Inventory inventory, String S, String W, String E, int T){
+        super(name, hp, attack, defense, agility, maxEquipped, floor, inventory, S, W, E, T);
         provoked = true;
     }
     
