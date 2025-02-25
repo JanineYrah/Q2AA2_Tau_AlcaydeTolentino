@@ -11,10 +11,10 @@ package skeletoncodeforaa;
 public abstract class Item {
     protected String name, description, status;
     
-    public Item (String n, String d, String s){
-        name = n;
-        description = d;
-        status = s;
+    public Item (String name, String description, String status){
+        this.name = name;
+        this.description = description;
+        this.status = status;
     }
     
     public String getName(){
