@@ -17,16 +17,16 @@ public class Character {
     protected Surrounding currentSurrounding;
     protected Inventory inventory;
     
-    public Character(String n, int h,int a,double d,int A,int m,Floor f,Invetory i){
-        name = n;
-        maxhp = h;
-        hp = h;
-        baseAttack = a;
-        baseDefense = d;
-        baseAgility = A;
-        maxEquipped = m;
-        currentFloor = f;
-        inventory = i;
+    public Character(String name, int hp, int attack, double defense, int agility, int maxEquipped, Floor floor, Invetory inventory){
+        this.name = name;
+        this.maxhp = hp;
+        this.hp = hp;
+        this.baseAttack = attack;
+        this.baseDefense = defense;
+        this.baseAgility = agility;
+        this.maxEquipped = maxEquipped;
+        this.currentFloor = floor;
+        this.inventory = inventory;
     }
     
     public int getHp(){
