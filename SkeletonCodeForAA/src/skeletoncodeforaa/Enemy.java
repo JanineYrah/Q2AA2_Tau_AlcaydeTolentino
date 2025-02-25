@@ -13,12 +13,13 @@ public class Enemy extends Character {
     protected int tier;
     protected boolean provoked;
     
-    public Enemy(String n, int h,int a,float d,int A,int m,Floor f,Inventory i, String S, String W, String E, int T){
-        super(n,h,a,d,A,m,f,i);
-        element = E;
-        strongAgainst = S;
-        weakAgainst = W;
-        tier = T;
+    public Enemy(String name, int hp, int attack, float defense, int agility, int maxEquipped, Floor floor, Inventory inventory,
+                 String strongAgainst, String weakAgainst, String element, int tier){
+        super(name, hp, attack, defense, agility, maxEquipped, floor, inventory);
+        this.strongAgainst = strongAgainst;
+        this.weakAgainst = weakAgainst;
+        this.element = element;
+        this.tier = tier;
         provoked = false;
     }
     
